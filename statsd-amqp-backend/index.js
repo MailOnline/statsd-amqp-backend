@@ -154,6 +154,8 @@ var flush_stats = function (ts, metrics) {
                             'deliveryMode': 2
                     };
 
+                    metrics.hostname = process.env.FQDN;
+
                     payload.push({
                         metric: 'json_payload',
                         result: JSON.stringify(metrics)
